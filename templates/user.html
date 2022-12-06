@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ol>
+        <li><a href="{{ url_for('user_search') }}">Search Users </a></li>
+        <li><a href="{{ url_for('user_add') }}">Add Users </a></li>
+        <li><a href="{{ url_for('user_all') }}">List Users </a></li>
+    </ol>
+{% endblock %}

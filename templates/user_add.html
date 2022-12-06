@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Search a User {% endblock %}</h1>
+    <form method="post">
+        <label for="id">user id</label>
+        <br>
+        <input type="text" name="email"
+               placeholder="user email"
+               value="{{ request.form['email'] }}"></input>
+        <br>
+
+        <label for="password">user password</label>
+        <br>
+        <input type="text" name="password"
+               placeholder="user password"
+               value="{{ request.form['password'] }}"></input>
+        <br>
+        
+        <label for="fname">user fname</label>
+        <br>
+        <input type="text" name="fname"
+               placeholder="user fname"
+               value="{{ request.form['fname'] }}"></input>
+        <br>
+        
+        <label for="lname">user lname</label>
+        <br>
+        <input type="text" name="lname"
+               placeholder="user lname"
+               value="{{ request.form['lname'] }}"></input>
+        <br>
+        
+        <br>
+        <button type="submit">submit</button>
+    </form>
+    <br>
+
+{% endblock %}

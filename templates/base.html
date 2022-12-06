@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> quera demo</title>
+    <style>
+        .message {
+            padding: 5px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #5041d6;
+            font-size: 2em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        nav a:hover {
+           color: rgb(165, 75, 244);
+        }
+        .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
+        .q_result{
+            padding: 5px;
+            padding-left: 20px;
+            margin: 5px;
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">home</a>
+        <a href="{{ url_for('user') }}">user</a>
+        <a href="{{ url_for('job_opp') }}">Jop opportunity</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

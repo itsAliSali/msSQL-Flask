@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Search a User {% endblock %}</h1>
+    <form method="post">
+        <label for="email">user email</label>
+        <br>
+        <input type="text" name="email"
+               placeholder="user email"
+               value="{{ request.form['email'] }}"></input>
+        <br>
+        <br>
+        <button type="search">search</button>
+    </form>
+    <br>
+    <h1> Results: </h1>
+    {% for dict_item in parent_list %}
+        {% for key, value in dict_item.items() %}
+            <p class="q_result">{{key}} : {{value}}</p>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+
+{% endblock %}

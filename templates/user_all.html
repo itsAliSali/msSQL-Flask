@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> All Users: </h1>
+    {% for dict_item in parent_list %}
+        {% for key, value in dict_item.items() %}
+            <p class="q_result">{{key}} : {{value}}</p>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+
+{% endblock %}
