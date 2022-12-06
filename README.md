@@ -10,7 +10,7 @@ Database server will run in a docker container and there is no need to install i
 Create SQL server, required tables and inserting some data:
 ```
 cd db
-./configure
+./configure.sh
 ```
 
 Running the Flask webserver
